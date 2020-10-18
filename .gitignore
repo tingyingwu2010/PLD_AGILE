@@ -1,5 +1,5 @@
 
 
-.idea/misc.xml
-.idea/PLD_AGILE.iml
-.idea/uiDesigner.xml
+*.xml
+*.iml
+
