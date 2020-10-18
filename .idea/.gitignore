@@ -7,5 +7,5 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+*.iml.idea/PLD_AGILE.iml
 *.iml
-
