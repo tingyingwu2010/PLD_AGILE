@@ -21,7 +21,7 @@ public class Window extends Application {
     private void initUI(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
-        var scene = new Scene(root, 1650, 1050, Color.BLUE);
+        var scene = new Scene(root, 1650, 1050, Color.WHITE);
 
         stage.setTitle("DeliveryTool");
         stage.setScene(scene);
