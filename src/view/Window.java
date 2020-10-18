@@ -9,22 +9,23 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class Window extends Application {
 
     @Override
     public void start(Stage MainFrame) throws Exception {
+        initUI(MainFrame);
+    }
+
+    private void initUI(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        MainFrame.setTitle("Kante");
 
-        MainFrame.setScene(new Scene(root, 1920, 1080));
-        MainFrame.setResizable(false);
-        MainFrame.show();
+        var scene = new Scene(root, 1650, 1050, Color.BLUE);
 
-        Group map = new Group();
-        Line line = new Line(40,100,10,400);
-        map.getChildren().add(line);
-
-
+        stage.setTitle("DeliveryTool");
+        stage.setScene(scene);
+        stage.show();
     }
 
 
