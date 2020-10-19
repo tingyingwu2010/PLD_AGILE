@@ -12,6 +12,7 @@ public class Intersection {
     protected long id;
     protected double longitude;
     protected double latitude;
+    protected List<Segment> listSegment;
 
 
     /**
