@@ -8,6 +8,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import model.Map;
 
 import java.util.*;
 
@@ -95,6 +96,10 @@ public class GraphicalView implements Observer {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setStroke(Color.BLACK);
         gc.strokeRoundRect(0, 0, 600, 600, 20, 20);
+    }
+
+    public void drawMap(Map map,Canvas canvas,Pane overlay) {
+        System.out.println("Dessin de la map");
     }
 
     @Override

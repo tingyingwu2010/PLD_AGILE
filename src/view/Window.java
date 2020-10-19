@@ -13,6 +13,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
+import model.Map;
 
 import java.io.IOException;
 
@@ -20,7 +21,7 @@ public class Window extends Application {
 
     GraphicalView Gview = new GraphicalView();
     TextualView Tview = new TextualView();
-    controller control = new controller();
+    Map map = new Map();
 
     @FXML
     private Canvas canvas;
@@ -45,11 +46,14 @@ public class Window extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        controller control = new controller();
+
     }
 
 
     public void LoadMap(ActionEvent event) {
 
+        Gview.drawMap(map,canvas,overlay);
         Gview.drawLines(canvas, overlay);
         Gview.drawShapes(canvas);
     }
