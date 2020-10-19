@@ -16,21 +16,15 @@ import java.util.*;
  */
 public class GraphicalView implements Observer {
 
-    public void LoadMap(ActionEvent event) {
-        drawLines();
-        drawShapes();
-    }
 
-    @FXML
-    private Canvas canvas;
-    @FXML
-    private Pane overlay;
+
+
 
     public static List<Circle> circles = new ArrayList<Circle>();
 
     public static List<Line> lines = new ArrayList<Line>();
 
-    public void drawLines(){
+    public void drawLines(Canvas canvas, Pane overlay){
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         Circle circle1 = new Circle(10);
@@ -97,7 +91,7 @@ public class GraphicalView implements Observer {
 
     }
 
-    private void drawShapes() {
+    public void drawShapes(Canvas canvas) {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setStroke(Color.BLACK);
         gc.strokeRoundRect(0, 0, 1200, 600, 20, 20);
