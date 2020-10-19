@@ -1,5 +1,8 @@
 package controler;
 
+import model.Request;
+import view.Window;
+
 import java.util.*;
 
 /**
@@ -13,4 +16,7 @@ public class RequestStateConfirmation implements State {
     public RequestStateConfirmation() {
     }
 
+    public void leftClick(controller controler, Window window, Map map, ListOfCommand listOfCommand, Request r) {
+
+    }
 }
