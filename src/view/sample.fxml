@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="1050.0" prefWidth="1650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.WindowControl">
+<VBox prefHeight="1050.0" prefWidth="1650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.GraphicalView">
 
     <children>
         <Button fx:id="btn_load_map" mnemonicParsing="false" onAction="#LoadMap" prefHeight="56.0" prefWidth="190.0" text="Load Map" translateX="50.0" translateY="50.0" GridPane.rowIndex="1">
