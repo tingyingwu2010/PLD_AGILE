@@ -2,19 +2,27 @@ package view;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.stage.FileChooser;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public class WindowControl {
 
     public void LoadMap(ActionEvent event) {
+        FileChooser mapFileChooser = new FileChooser();
+        mapFileChooser.setTitle("Load Map");
+        mapFileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("XML", "*.xml"));
+        File mapFile = mapFileChooser.showOpenDialog(((Node)event.getSource()).getScene().getWindow());
+        System.out.println(mapFile.getAbsolutePath());
         drawLines();
         drawShapes();
     }
