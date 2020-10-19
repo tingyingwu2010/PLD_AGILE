@@ -8,8 +8,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1"
-          xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.WindowControl">
+
+<?import javafx.scene.layout.Pane?>
+<VBox prefHeight="1050.0" prefWidth="1650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.GraphicalView">
+
 
     <children>
         <Label text="Load map"/>
@@ -19,7 +21,10 @@
                 <Font size="18.0"/>
             </font>
         </Button>
-        <Canvas fx:id="canvas" height="600.0" scaleX="1.0" scaleY="1.0" translateX="200.0" translateY="100.0"
-                width="600.0"/>
+      <Pane fx:id="overlay" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" translateX="50.0" translateY="70.0">
+         <children>
+            <Canvas fx:id="canvas" height="600.0" width="1200.0" />
+         </children></Pane>
+
     </children>
 </VBox>
