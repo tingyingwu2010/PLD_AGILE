@@ -21,10 +21,11 @@ public class Intersection {
     public Intersection() {
     }
 
-    public Intersection(long id, double latitude, double longitude) {
+    public Intersection(long id, double latitude, double longitude, List<Segment> listSegment) {
         this.id = id;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.listSegment = listSegment;
     }
 
     public long getId() {
@@ -51,7 +52,15 @@ public class Intersection {
         this.latitude = latitude;
     }
 
-    public String toString(){
-        return "Intersection :\n Id : " + this.id + "\n Latitude : " + this.latitude + "\n Longitude : " + this.longitude + "\n";
+    public List<Segment> getListSegment() {
+        return listSegment;
     }
+
+    public void setListSegment(List<Segment> listSegment) {
+        this.listSegment = listSegment;
+    }
+
+    /*public String toString(){
+        return "Intersection :\n Id : " + this.id + "\n Latitude : " + this.latitude + "\n Longitude : " + this.longitude + "\n";
+    }*/
 }
