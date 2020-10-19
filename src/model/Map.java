@@ -18,6 +18,7 @@ public class Map extends Observable {
     public Map() {
     }
 
+
     /**
      * Getters - Setters
      */
@@ -36,6 +37,7 @@ public class Map extends Observable {
     public void setListIntersections(List<Intersection> listIntersections) {
         this.listIntersections = listIntersections;
     }
+
 
     @Override
     public String toString() {
