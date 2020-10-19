@@ -94,7 +94,7 @@ public class GraphicalView implements Observer {
     public void drawShapes(Canvas canvas) {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setStroke(Color.BLACK);
-        gc.strokeRoundRect(0, 0, 1200, 600, 20, 20);
+        gc.strokeRoundRect(0, 0, 600, 600, 20, 20);
     }
 
     @Override
