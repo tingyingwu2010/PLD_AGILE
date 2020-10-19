@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 
  */
-public class InitialState extends State {
+public class InitialState implements State {
 
     /**
      * Default constructor

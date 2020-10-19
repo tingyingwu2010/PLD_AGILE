@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 
  */
-public class RequestStateDeliveryPoint extends State {
+public class RequestStateDeliveryPoint implements State {
 
     /**
      * Default constructor

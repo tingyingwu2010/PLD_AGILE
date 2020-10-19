@@ -1,15 +1,14 @@
 package controler;
 
-import java.util.*;
-
-/**
- * 
- */
-public class Command {
+public interface Command {
 
     /**
-     * Default constructor
+     * Execute the command this
      */
-    public Command() {
-    }
+    void doCommand();
+
+    /**
+     * Execute the reverse command of this
+     */
+    void undoCommand();
 }

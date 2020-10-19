@@ -5,11 +5,12 @@ import java.util.*;
 /**
  * 
  */
-public class RequestStateConfirmation extends State {
+public class RequestStateConfirmation implements State {
 
     /**
      * Default constructor
      */
     public RequestStateConfirmation() {
     }
+
 }
