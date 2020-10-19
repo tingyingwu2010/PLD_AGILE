@@ -1,15 +1,22 @@
 package controler;
 
+import model.Request;
+import view.Window;
+
 import java.util.*;
 
 /**
  * 
  */
-public class InitialState extends State {
+public class InitialState implements State {
 
     /**
      * Default constructor
      */
     public InitialState() {
+    }
+
+    public void leftClick(controller controler, Window window, Map map, ListOfCommand listOfCommand, Request r) {
+
     }
 }
