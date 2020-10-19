@@ -1,5 +1,6 @@
 package view;
 
+import controler.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
@@ -31,5 +32,8 @@ public class Window extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
+        Controller controller = new Controller();
+        controller.parseMapXML("/Users/basselslim/Documents/4IF/Semestre_1/AGILE/PLD/fichiersXML2020/largeMap.xml");
     }
 }
