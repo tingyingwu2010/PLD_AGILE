@@ -9,54 +9,46 @@ public class Segment {
     /**
      *
      */
-    protected long destination;
-    protected double length;
-    protected String name;
-    protected long origin;
+    protected int length;
+    protected String streetName;
+    protected Intersection ends;
 
     /**
      * Default constructor
      */
-    public Segment(long destination, double length, String name, long origin) {
-        this.destination = destination;
+    public Segment() {
+    }
+
+    public Segment(int length, String streetName, Intersection ends) {
         this.length = length;
-        this.name = name;
-        this.origin = origin;
+        this.streetName = streetName;
+        this.ends = ends;
     }
 
-    public long getDestination() {
-        return destination;
-    }
-
-    public void setDestination(long destination) {
-        this.destination = destination;
-    }
-
-    public double getLength() {
+    /**
+     * Getters - Setters
+     */
+    public int getLength() {
         return length;
     }
 
-    public void setLength(double length) {
+    public void setLength(int length) {
         this.length = length;
     }
 
-    public String getName() {
-        return name;
+    public String getStreetName() {
+        return streetName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
     }
 
-    public long getOrigin() {
-        return origin;
+    public Intersection getEnds() {
+        return ends;
     }
 
-    public void setOrigin(long origin) {
-        this.origin = origin;
-    }
-
-    public String toString(){
-        return "Segment :\n Destination : " + this.destination + "\n Length : " + this.length + "\n Name : " + this.name + "\n Origin : " + this.origin + "\n";
+    public void setEnds(Intersection ends) {
+        this.ends = ends;
     }
 }

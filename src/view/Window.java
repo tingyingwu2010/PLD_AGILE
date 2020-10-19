@@ -2,21 +2,36 @@ package view;
 
 import controler.Controller;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Line;
 import javafx.stage.Stage;
+import model.Map;
 
 import java.io.IOException;
 
 public class Window extends Application {
 
+    GraphicalView Gview = new GraphicalView();
+    TextualView Tview = new TextualView();
+    Map map;
+    Controller controller;
+
+    @FXML
+    private Canvas canvas;
+    @FXML
+    private Pane overlay;
+
     @Override
     public void start(Stage MainFrame) throws Exception {
         initUI(MainFrame);
+        map = new Map();
+        controller = new Controller(map);
     }
 
     private void initUI(Stage stage) throws IOException {
@@ -27,13 +42,20 @@ public class Window extends Application {
         stage.setTitle("DeliveryTool");
         stage.setScene(scene);
         stage.show();
-    }
 
+    }
 
     public static void main(String[] args) {
         launch(args);
 
-        Controller controller = new Controller();
-        controller.parseMapXML("/Users/basselslim/Documents/4IF/Semestre_1/AGILE/PLD/fichiersXML2020/largeMap.xml");
+    }
+
+
+    public void LoadMap(ActionEvent event) {
+
+        Gview.drawMap(map,canvas,overlay);
+        Gview.drawLines(canvas, overlay);
+        Gview.drawShapes(canvas);
     }
 }
+

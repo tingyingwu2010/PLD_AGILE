@@ -1,19 +1,5 @@
 package controler;
-
-import model.Intersection;
 import model.Map;
-
-import java.io.File;
-import java.io.IOException;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
-import model.Segment;
-import org.w3c.dom.*;
-import org.xml.sax.SAXException;
-
 
 import java.util.*;
 
@@ -22,11 +8,28 @@ import java.util.*;
  */
 public class Controller {
 
+    ListOfCommand listOfCommand;
+    State currentState;
+    Map map;
+
+
+    protected final InitialState initialState = new InitialState();
+    protected final RequestStatePickUpPoint requestStatePickUpPoint = new RequestStatePickUpPoint();
+    protected final RequestStateDeliveryPoint requestStateDeliveryPoint = new RequestStateDeliveryPoint();
+    protected final RequestStateConfirmation requestStateConfirmation = new RequestStateConfirmation();
+    protected final DeleteState deleteState = new DeleteState();
+
     /**
      * Default constructor
      */
-    public Controller() {
+    public Controller(Map newMap) {
+        listOfCommand = new ListOfCommand();
+        currentState = initialState;
+        map = newMap;
     }
 
-
+    protected void setCurrentstate(State newState) {
+        currentState = newState;
+    }
 }
+

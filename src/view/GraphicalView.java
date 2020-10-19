@@ -8,6 +8,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import model.Map;
 
 import java.util.*;
 
@@ -16,21 +17,15 @@ import java.util.*;
  */
 public class GraphicalView implements Observer {
 
-    public void LoadMap(ActionEvent event) {
-        drawLines();
-        drawShapes();
-    }
 
-    @FXML
-    private Canvas canvas;
-    @FXML
-    private Pane overlay;
+
+
 
     public static List<Circle> circles = new ArrayList<Circle>();
 
     public static List<Line> lines = new ArrayList<Line>();
 
-    public void drawLines(){
+    public void drawLines(Canvas canvas, Pane overlay){
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         Circle circle1 = new Circle(10);
@@ -97,10 +92,14 @@ public class GraphicalView implements Observer {
 
     }
 
-    private void drawShapes() {
+    public void drawShapes(Canvas canvas) {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setStroke(Color.BLACK);
         gc.strokeRoundRect(0, 0, 600, 600, 20, 20);
+    }
+
+    public void drawMap(Map map,Canvas canvas,Pane overlay) {
+        System.out.println("Dessin de la map");
     }
 
     @Override
