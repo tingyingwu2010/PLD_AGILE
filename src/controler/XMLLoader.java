@@ -58,7 +58,7 @@ public class XMLLoader {
                         long id = Long.parseLong(att.item(0).getNodeValue());
                         double latitude = Double.parseDouble(att.item(1).getNodeValue());
                         double longitude = Double.parseDouble(att.item(2).getNodeValue());
-                        Intersection intersection = new Intersection(id, latitude, longitude,listSegment);
+                        //Intersection intersection = new Intersection(id, latitude, longitude,listSegment);
                     }
 
                     if(nodeName == "segment")
@@ -67,8 +67,8 @@ public class XMLLoader {
                         double length = Double.parseDouble(att.item(1).getNodeValue());
                         String name = att.item(2).getNodeValue();
                         long origin = Long.parseLong(att.item(3).getNodeValue());
-                        Segment segment = new Segment(destination, length, name, origin);
-                        listSegment.add(segment);
+                        //Segment segment = new Segment(destination, length, name, origin);
+                        //listSegment.add(segment);
                     }
                 }
             }
@@ -116,7 +116,7 @@ public class XMLLoader {
                         long id = Long.parseLong(att.item(0).getNodeValue());
                         double latitude = Double.parseDouble(att.item(1).getNodeValue());
                         double longitude = Double.parseDouble(att.item(2).getNodeValue());
-                        Intersection intersection = new Intersection(id, latitude, longitude,listSegment);
+                        //Intersection intersection = new Intersection(id, latitude, longitude,listSegment);
                     }
 
                     if(nodeName == "segment")
@@ -125,8 +125,8 @@ public class XMLLoader {
                         double length = Double.parseDouble(att.item(1).getNodeValue());
                         String name = att.item(2).getNodeValue();
                         long origin = Long.parseLong(att.item(3).getNodeValue());
-                        Segment segment = new Segment(destination, length, name, origin);
-                        listSegment.add(segment);
+                        //Segment segment = new Segment(destination, length, name, origin);
+                        //listSegment.add(segment);
                     }
                 }
             }
