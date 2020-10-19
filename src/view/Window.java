@@ -26,6 +26,8 @@ public class Window extends Application {
         stage.setTitle("DeliveryTool");
         stage.setScene(scene);
         stage.show();
+        
+        root.setController(GraphicalView);
     }
 
 
