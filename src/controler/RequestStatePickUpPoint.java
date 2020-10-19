@@ -16,7 +16,7 @@ public class RequestStatePickUpPoint implements State {
     public RequestStatePickUpPoint() {
     }
 
-    public void leftClick(controller controler, Window window, Map map, ListOfCommand listOfCommand, Request r) {
+    public void leftClick(Controller controler, Window window, Map map, ListOfCommand listOfCommand, Request r) {
         
     }
 }

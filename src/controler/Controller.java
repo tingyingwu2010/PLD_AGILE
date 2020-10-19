@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * 
  */
-public class controller {
+public class Controller {
 
     ListOfCommand listOfCommand;
     State currentState;
@@ -22,7 +22,7 @@ public class controller {
     /**
      * Default constructor
      */
-    public controller(Map newMap) {
+    public Controller(Map newMap) {
         listOfCommand = new ListOfCommand();
         currentState = initialState;
         map = newMap;

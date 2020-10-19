@@ -1,17 +1,15 @@
 package view;
 
-import controler.controller;
+import controler.Controller;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 import model.Map;
 
@@ -21,7 +19,8 @@ public class Window extends Application {
 
     GraphicalView Gview = new GraphicalView();
     TextualView Tview = new TextualView();
-    Map map = new Map();
+    Map map;
+    Controller controller;
 
     @FXML
     private Canvas canvas;
@@ -31,6 +30,8 @@ public class Window extends Application {
     @Override
     public void start(Stage MainFrame) throws Exception {
         initUI(MainFrame);
+        map = new Map();
+        controller = new Controller(map);
     }
 
     private void initUI(Stage stage) throws IOException {
@@ -46,7 +47,6 @@ public class Window extends Application {
 
     public static void main(String[] args) {
         launch(args);
-        controller control = new controller();
 
     }
 

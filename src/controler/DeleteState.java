@@ -11,7 +11,7 @@ public class DeleteState implements State {
     // -> Return back to initialState when receiving the message rightClick()
 
     @Override
-    public void leftClick(controller controler, Window window, Map map, ListOfCommand listOfCommands, Request r) {
+    public void leftClick(Controller controler, Window window, Map map, ListOfCommand listOfCommands, Request r) {
        /* Shape shape = plan.search(p);
         if (shape != null)
             listOfCommands.add(new ReverseCommand(new AddCommand(plan, shape))); */
